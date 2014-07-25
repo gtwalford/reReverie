@@ -1,0 +1,100 @@
+body {
+	  background-color: #333; color: #bbb; line-height: normal;
+	  font-family: Lucida Grande, Lucida Sans, Arial, Helvetica Neue, Verdana, Geneva, sans-serif;
+	  font-size: 11px; font-weight: normal; text-decoration: none;
+	}
+	a img { 
+		border: 0px solid transparent;
+	}
+	a, a:link, a:visited, a:active, a:hover { 
+		color: #cdcdcd; text-decoration: underline;
+	}
+	h1 {
+	    font-family: Arial, Helvetica Neue, Verdana, Geneva, sans-serif;
+		width: 100%; letter-spacing: 0.1em;
+		margin-bottom: 1em; font-size: 1.65em;
+	}
+	canvas { 
+		display: block; 
+		width: 100%;
+		height: 100%;
+	}
+	#action { 
+		position: fixed;
+		width: 100%; min-width: 500px; overflow: auto;
+		height: 100%; min-height: 500px; overflow: auto;
+		z-index: 1;
+	}
+	#navigation {
+		position: absolute;
+		margin-top: 0px;
+		display:block;
+		list-style:none;
+		z-index:3;
+	}
+	#navigation a{
+		color: #444;
+		display: block;
+		background: #fff;
+		background: rgba(255,255,255,0.9);
+		line-height: 24px;
+		padding: 0px 20px;
+		text-transform: uppercase;
+		margin-bottom: 2px;
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+		font-size: 10px;
+	}
+	#navigation a:hover {
+		background: #ddd;
+	}
+	.content{
+		right: 40px;
+		left: 280px;
+		top: 0px;
+		padding: 30px;
+	}
+	.content h2{
+		font-size: 34px;
+		padding: 10px 0px 20px 0px;
+		margin-top: 52px;
+/*		margin-left: 30px;*/
+		color: #333;
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+	}
+	.content p{
+		font-size: 18px;
+		padding: 10px;
+		line-height: 24px;
+		color: #333;
+		background: transparent;
+		padding: 10px;
+		margin: 3px 0px;
+	}
+	.content a{
+		color: #333;
+	}
+	.content a:hover{
+		color: #ddd;
+	}
+	.panel{
+		width: 60%;
+/*		height: %;*/
+		overflow-y: auto;
+		overflow-x: hidden;
+		margin-top: -150%;
+		margin-left: 20%;
+		position: absolute;
+		background: #fff;
+		box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+		border: 4px solid #333;
+		z-index: 2;
+		-webkit-transition: all .8s ease-in-out;
+		-moz-transition: all .8s ease-in-out;
+		-o-transition: all .8s ease-in-out;
+		transition: all .8s ease-in-out;
+	}
+	.panel:target{
+		margin-top: 100px;
+		background-color: #eee;
+		color: #efefef;
+	}
