@@ -20,17 +20,6 @@
 
   </head>
   <body>
-    <canvas id="reverie" data-processing-sources="reverie.pde">
-      <p>Your browser does not support this experience... Sorry about that, maybe try Google Chrome.</p>
-    </canvas>
-    <noscript>
-      <p>JavaScript is required to view the contents of this page!</p>
-    </noscript>
-
-    <ul id="navigation">
-      <li><a id="link-about" href="#about">About</a></li>
-    </ul>
-
     <div id="about" class="panel">
       <div class="content">
         <h1>Re:Reverie (The Clearing)</h1>
@@ -46,6 +35,18 @@
         <p style="text-align: left;"><a id="link-home" href="#home">Close</a></p>
       </div>
     </div>
+
+    <ul class="navigation">
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <canvas id="reverie" data-processing-sources="js/reverie.pde">
+      <p>Your browser does not support this experience... Sorry about that, maybe try Google Chrome.</p>
+    </canvas>
+    <noscript>
+      <p>JavaScript is required to view the contents of this page!</p>
+    </noscript>
+
 
     <script src="js/lib/processing.js" /></script>
     <script>
