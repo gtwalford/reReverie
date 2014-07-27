@@ -1,6 +1,6 @@
 body {
   background-color: #333;
-  color: #bbb; 
+  color: #333; 
   font-family: Lucida Grande, Lucida Sans, Arial, Helvetica Neue, Verdana, Geneva, sans-serif;
   font-size: 11px; 
   font-weight: normal; 
@@ -38,13 +38,13 @@ canvas {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  z-index: 2;
+  position: absolute;
+  z-index: 3;
 }
 
 header h1 {
-  text-indent: -9999px;
+  left: -9999px;
+  position: fixed;
 }
 
 header a {
@@ -125,17 +125,21 @@ header a img:hover {
 }
 
 .content {
-  left: 280px;
+  background: #fff;
+  border: 4px solid #333;
+  box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+  left: 20%;
   padding: 30px;
+  position: absolute;
   right: 40px;
-  top: 0px;
+  top: 10%;
+  width: 60%;
 }
 
 .content h2 {
   color: #333;
   font-size: 24px;
-  margin-top: 52px;
-  padding: 10px 0px 20px 0px;
+  margin: 0;
   text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
 
@@ -144,7 +148,10 @@ header a img:hover {
   font-size: 15px;
   line-height: 24px;
   margin: 3px 0px;
-  padding: 10px;
+}
+
+.content li {
+  font-size: 14px;
 }
 
 .content a{
@@ -155,16 +162,13 @@ header a img:hover {
   color: #ddd;
 }
 
-.panel{
-  background: #fff;
-  border: 4px solid #333;
-  box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+.panel {
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   margin-top: -150%;
-  margin-left: 20%;
   position: absolute;
-  width: 60%;
+  width: 100%;
   z-index: 2;
   -webkit-transition: all .8s ease-in-out;
   -moz-transition: all .8s ease-in-out;
@@ -173,6 +177,17 @@ header a img:hover {
 }
 
 .panel:target{
-  color: #efefef;
-  margin-top: 100px;
+  margin-top: 0;
+}
+
+.click-out {
+  background: none;
+  height: 100%;
+  text-indent: -9999px;
+  width: 100%;
+}
+
+.panel:target .click-out {
+  display: block;
+  top: 0;
 }
