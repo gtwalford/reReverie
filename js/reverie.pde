@@ -1,15 +1,15 @@
-PyrTop gtwTop;
-PyrTop gtwTop2;
-Polyg gtwPoly;
-Polyg gtwPoly2;
-Polyg gtwPoly3;
-Polyg gtwPoly4;
-Blades gtwBlade;
-BGshape myShape;
-BGshape myShape2;
-BGshape myShape3;
-BGshape myShape4;
-BGshape myShape5;
+PyrTop top1;
+PyrTop top2;
+Polyg poly1;
+Polyg poly2;
+Polyg poly3;
+Polyg poly4;
+Blades blade;
+BGshape shape1;
+BGshape shape2;
+BGshape shape3;
+BGshape shape4;
+BGshape shape5;
 
 int x,y,z,r;
 float rR,rR2,rD;
@@ -19,18 +19,18 @@ void setup(){
   size(4000,3000, OPENGL);
   smooth();
 
-  gtwTop = new PyrTop();
-  gtwTop2 = new PyrTop();
-  gtwPoly = new Polyg();
-  gtwPoly2 = new Polyg();
-  gtwPoly3 = new Polyg();
-  gtwPoly4 = new Polyg();
-  gtwBlade = new Blades();
-  myShape = new BGshape();
-  myShape2 = new BGshape();
-  myShape3 = new BGshape();
-  myShape4 = new BGshape();
-  myShape5 = new BGshape();
+  top1 = new PyrTop();
+  top2 = new PyrTop();
+  poly1 = new Polyg();
+  poly2 = new Polyg();
+  poly3 = new Polyg();
+  poly4 = new Polyg();
+  blade = new Blades();
+  shape1 = new BGshape();
+  shape2 = new BGshape();
+  shape3 = new BGshape();
+  shape4 = new BGshape();
+  shape5 = new BGshape();
 
   
   x = 1000;
@@ -44,29 +44,29 @@ void setup(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 void draw(){
-  
+  // Setup environment
   background(200,.25);
   ambientLight(250, 250, 250);
-  
   rotateY(r);
   rotateX(rD);
   translate(x, y, z);
+
 //////
-  pushMatrix(); //OUTTER
+  pushMatrix();
     rotateY(rR);
     rR+=25;
     
     for(float i=0; i<360; i = i+5){
       pushMatrix();  
         rotateY(i);
-        gtwTop.moving();
+        top1.moving();
       popMatrix();
       
       rotateX(PI);
       
       pushMatrix();
         rotateY(i);
-        gtwPoly.moving();
+        poly1.moving();
       popMatrix();
     }
   popMatrix();
@@ -78,7 +78,7 @@ void draw(){
     for(float i=0; i<360; i = i+5){
       pushMatrix();  
         rotateY(i);
-        gtwTop2.moving();
+        top2.moving();
       popMatrix();
     }
   popMatrix();
@@ -90,7 +90,7 @@ void draw(){
       pushMatrix();
         rotateY(j);
         translate(-100,0,0);
-        gtwPoly.moving();
+        poly1.moving();
       popMatrix();
     }
   popMatrix();
@@ -103,7 +103,7 @@ void draw(){
       pushMatrix();
         rotateY(j);
         translate(0,500,0);
-        gtwPoly2.moving();
+        poly2.moving();
       popMatrix();
     }
   popMatrix();
@@ -116,7 +116,7 @@ void draw(){
     for(float jJ=0; jJ<360; jJ = jJ+20){
       pushMatrix();
         rotateY(jJ);
-        gtwPoly3.moving();
+        poly3.moving();
       popMatrix();
     }
   popMatrix();
@@ -129,7 +129,7 @@ void draw(){
         rotateY(k);
         for(float l=0; l<100; l+=20){ 
           rotateX(l);
-          gtwBlade.moving();
+          blade.moving();
         }
       popMatrix();
     }
@@ -143,7 +143,7 @@ void draw(){
         rotateY(m);
         for(float n=0; n<20; n+=1){ 
           rotateX(n);
-            myShape.moving();
+            shape1.moving();
         }
       popMatrix();
     }
@@ -157,7 +157,7 @@ void draw(){
         rotateY(o);
         for(float p=0; p<400; p+=30){ 
           rotateX(p);
-            myShape2.moving();
+            shape2.moving();
         }
       popMatrix();
     }
@@ -171,7 +171,7 @@ void draw(){
         rotateY(s);
         for(float t=0; t<10; t+=1){ 
           rotateX(t);
-            myShape4.moving();
+            shape4.moving();
         }
       popMatrix();
     }
@@ -185,7 +185,7 @@ void draw(){
         rotateY(u);
         for(float v=0; v<200; v+=34){ 
           rotateX(v);
-            myShape5.moving();
+            shape5.moving();
         }
       popMatrix();
     }
